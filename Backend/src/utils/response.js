@@ -6,10 +6,11 @@ function success(res, statusCode = 200, message = "Success", data = null) {
   });
 }
 
-function error(res, statusCode = 500, message = "Something went wrong") {
+function error(res, statusCode = 500, message = "Something went wrong", data = null) {
   return res.status(statusCode).json({
     success: false,
     message,
+    data,
   });
 }
 
